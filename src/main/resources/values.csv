@@ -1,0 +1,12 @@
+invoice,email,enUS,English,US,us_support@daveturner.software,Invoice Subject Line,invoiceMapper
+invoice,sms,enUS,English,US,us_support@daveturner.software,Invoice Subject Line,invoiceSmsMapper
+invoice,email,spUS,Spanish,US,spus_support@daveturner.software,Línea de asunto de la factura, invoiceMapper
+invoice,sms,spUS,Spanish,US,spus_support@daveturner.software,Línea de asunto de la factura,invoiceSmsMapper
+invoice,email,spMX,Spanish,MX,mx_support@daveturner.software,Línea de asunto de la factura,invoiceMapper
+invoice,sms,spMX,Spanish,MX,mx_support@daveturner.software,Línea de asunto de la factura,invoiceSmsMapper
+invoice,email,enMX,English,MX,enmx_support@daveturner.software,Invoice Subject Line,invoiceMapper
+invoice,sms,enMX,English,MX,enmx_support@daveturner.software,Invoice Subject Line,invoiceSmsMapper
+invoice,email,enCA,English,CA,ca_support@daveturner.software,Invoice Subject Line eh,invoiceMapper
+invoice,sms,enCA,English,CA,ca_support@daveturner.software,Invoice Subject Line eh,invoiceSmsMapper
+invoice,email,frCA,French,CA,fr_support@daveturner.software,Objet de la facture eh,invoiceMapper
+invoice,sms,frCA,French,CA,fr_support@daveturner.software,Objet de la facture,invoiceSmsMapper

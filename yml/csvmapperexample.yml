@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  description: parses out elements of the URL path and body and maps them using a csv file as a guide
+  version: "1.0.0"
+  title: Values Mapper
+  contact:
+    email: davetii@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+
+servers:
+  - url: http://localhost:8080/api
+    description: Local Server
+
+paths:
+  /v1/mapvalues/{notifyType}_{deliveryType}_{locale}:
+    parameters:
+      - in: path
+        name: notifyType
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: deliveryType
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: locale
+        required: true
+        schema:
+          type: string
+
+    post:
+      summary: mapping excersise
+      description: parses out elements of the URL path and body and maps them using a csv file as a guide
+                   body returned will be JSON encoded
+      operationId: postData
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValuesMapperInput"
+      responses:
+        '200':
+          description: returns a ValueMapperResponse
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValueMapperResponse"
+        '500':
+          description: unsuccessful map
+
+components:
+  schemas:
+    ValuesMapperInput:
+      type: object
+      properties:
+        target:
+          type: string
+        subject:
+          type: string
+        body:
+          type: string
+      required: ["target"]
+    ValueMapperResponse:
+      type: object
+      properties:
+        notifyType:
+          type: string
+        deliveryType:
+          type: string
+        language:
+          type: string
+        country:
+          type: string
+        supportEmail:
+          type: string
+        target:
+          type: string
+        subject:
+          type: string
+        body:
+          type: string
